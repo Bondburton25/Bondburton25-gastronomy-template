@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Product Landing Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="header" class="header" style="background-image: url('img/header.jpg');"> 
-        <nav  id="navbar">
+    <header id="header" class="header" style="background-image:url('img/header.webp')"> 
+        <!-- Hamburger Button -->
+        <div class="hamburger" onclick="toggleHamburger(this)">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- Navigation Menu for Small Screens -->
+        <nav class="menu-sm">
             <ul>
+            <li><a href="#header">หน้าหลัก</a></li>
+            <li><a href="#gi-products">สินค้า GI</a></li>
+            <li><a href="#project-info">ข้อมูลโครงการ</a></li>
+            <li><a href="#recipes">ตำรับมองจันทร์ผ่านจาน</a></li>
+            <li><a href="#event">กิจกรรมของโครงการ</a></li>
+            <li><a href="#map">แผนที่ของดีเมืองจันทร์</a></li>
+            <li><a href="#facebookPage">เพจเกี่ยวกับอาหาร</a></li>
+            </ul>
+        </nav>
+        <nav id="navbar">
+            <ul id="nav-links" class="hidden">
                 <li><a href="#header">หน้าหลัก</a></li>
                 <li><a href="#gi-products">สินค้า GI</a></li>
                 <li><a href="#project-info">ข้อมูลโครงการ</a></li>
@@ -20,7 +37,7 @@
                 <li><a href="#facebookPage">เพจเกี่ยวกับอาหาร</a></li>
             </ul>
         </nav>
-        <h1>Welcome to Chanthaburi's Local Delicacies</h1>
+        <h1 class="text-uppercase">เส้นทางอาหารของเมืองจันทร์</h1>
     </header>
     <main>
     <section id="gi-products">
@@ -35,11 +52,9 @@
                 </p>
             </div>
         </div> 
-
         <div class="container">
             <h3 class="title">สินค้า GI จังหวัดจันทบุรี</h3>
         </div>
-        
         <div class="gi-product-grid">
             <!-- Repeat this block for each product -->
             <div class="gi-product-item">
@@ -237,7 +252,6 @@
                     <a href="https://www.facebook.com/facebook">Facebook</a>
                 </blockquote>
             </div>
-    
             
             <div class="fb-page" data-href="https://www.facebook.com/ChanthaburiGastronomy" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
                 <blockquote cite="https://www.facebook.com/ChanthaburiGastronomy" class="fb-xfbml-parse-ignore">
@@ -266,8 +280,6 @@
     <footer>
         <p>&copy; 2024 Chanthaburi Local Products. All rights reserved.</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v21.0&appId=447934332551254"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
     <script src="js/script.js"></script>

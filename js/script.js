@@ -1,3 +1,12 @@
+
+function toggleHamburger(element) {
+    element.classList.toggle("open");
+    document.querySelector(".menu-sm").classList.toggle("open");
+}
+
+
+  
+
 document.addEventListener("DOMContentLoaded", function() {
     const recipeSection = document.getElementById("recipes");
     

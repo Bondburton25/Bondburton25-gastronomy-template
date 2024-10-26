@@ -1,60 +1,58 @@
-/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap'); */
-
-/* Font */
 @font-face {
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     src: url('../fonts/FCIconicNoncommercial-Bold.woff2') format('woff2'),
-        url('FCIconicNoncommercial-Bold.woff') format('woff');
+        url('../fonts/FCIconicNoncommercial-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     src: url('../fonts/FCIconicNoncommercial-BoldCompressed.woff2') format('woff2'),
-        url('FCIconicNoncommercial-BoldCompressed.woff') format('woff');
+        url('../fonts/FCIconicNoncommercial-BoldCompressed.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     src: url('../fonts/FCIconicNoncommercial-BoldCondensed.woff2') format('woff2'),
-        url('FCIconicNoncommercial-BoldCondensed.woff') format('woff');
+        url('../fonts/FCIconicNoncommercial-BoldCondensed.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     src: url('../fonts/FCIconicNoncommercial-BoldExpanded.woff2') format('woff2'),
-        url('FCIconicNoncommercial-BoldExpanded.woff') format('woff');
+        url('../fonts/FCIconicNoncommercial-BoldExpanded.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     src: url('../fonts/FCIconicNoncommercial-Light.woff2') format('woff2'),
-        url('FCIconicNoncommercial-Light.woff') format('woff');
+        url('../fonts/FCIconicNoncommercial-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     src: url('../fonts/FCIconicNoncommercial-BoldWide.woff2') format('woff2'),
-        url('FCIconicNoncommercial-BoldWide.woff') format('woff');
+        url('../fonts/FCIconicNoncommercial-BoldWide.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
+/* Other font-face declarations remain unchanged */
 * {
     margin: 0;
     padding: 0;
@@ -66,8 +64,7 @@ html {
 }
 
 body {
-    /* font-family: "IBM Plex Sans Thai", sans-serif; */
-    font-family: 'FC Iconic';
+    font-family: 'FC Iconic [Non-commercial]';
     font-weight: normal;
     line-height: 1.6;
     scroll-behavior: smooth; /* Smooth scrolling */
@@ -75,17 +72,18 @@ body {
 
 .header {
     position: relative;
-    height: 100vh; /* Full viewport height */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the image */
+    height: 100vh;
+    background-size: cover; 
+    background-position: center; 
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center content vertically */
-    color: white; /* Text color */
-    text-align: left; /* Align text to the left */
-    padding: 20px; /* Add padding */
-    opacity: 0; /* Start with opacity 0 for fade-in */
-    animation: fadeIn 1s forwards; /* Fade-in animation */
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-align: left; 
+    padding: 20px; 
+    opacity: 0; 
+    animation: fadeIn 1s forwards; 
 }
 
 @keyframes fadeIn {
@@ -98,13 +96,13 @@ body {
 }
 
 .header-content {
-    position: relative; /* Position relative to overlay */
-    z-index: 2; /* Bring content above overlay */
-    display: flex; /* Flex container for icon and text */
-    align-items: center; /* Center vertically */
-    animation: slideIn 0.5s forwards; /* Slide-in animation */
-    opacity: 0; /* Start with opacity 0 for fade-in */
-    transform: translateX(-50px); /* Start from the left */
+    position: relative; 
+    z-index: 2; 
+    display: flex; 
+    align-items: center; 
+    animation: slideIn 0.5s forwards; 
+    opacity: 0; 
+    transform: translateX(-50px); 
 }
 
 @keyframes slideIn {
@@ -123,44 +121,161 @@ body {
 }
 
 .food-icon {
-    font-size: 50px; /* Adjust the icon size */
-    margin-right: 10px; /* Space between icon and text */
-    transition: transform 0.3s; /* Smooth transition for scale effect */
+    font-size: 2.5rem; /* Adjusted for responsiveness */
+    margin-right: 10px; 
+    transition: transform 0.3s; 
 }
 
 .food-icon:hover {
-    transform: scale(1.1); /* Scale up on hover */
+    transform: scale(1.1); 
 }
 
+/* Navbar styles */
 nav {
-    position: absolute; /* Absolute positioning to keep it at the top */
-    top: 20px; /* Space from the top */
+    position: absolute; 
+    top: 20px; 
     left: 0;
     right: 0;
-    z-index: 2; /* Bring nav above overlay */
-    text-align: center; /* Center nav items */
+    z-index: 2; 
+    text-align: center; 
+    padding: 10px 0; 
 }
 
 nav ul {
-    list-style: none; /* Remove bullet points */
+    list-style: none; 
     padding: 0;
+    margin: 0; 
 }
 
 nav ul li {
-    display: inline; /* Display items inline */
-    margin: 0 15px; /* Space between items */
+    display: inline; 
+    margin: 0 15px; 
 }
 
 nav ul li a {
-    color: white; /* White text color for links */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
-    transition: color 0.3s ease; /* Smooth transition for color change */
+    color: #FFF; 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: color 0.4s ease, text-decoration 0.4s ease; /* Reduced duration for quicker color change */
 }
 
 nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover for effect */
-    color: #ffcc00; /* Change color on hover (customize as needed) */
+    /* text-decoration: underline;  */
+    color: #ffcc00;
+    font-weight: 500; 
+}
+
+  
+/* Navbar for Desktop View */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Hamburger Button */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0
+  }
+  
+  .hamburger .line {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger.open .line {
+    background-color: #000
+  }
+
+  /* Toggle Animation */
+  .hamburger.open .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  
+  /* Mobile Navigation Menu */
+  .menu-sm {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c6BCA3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    z-index: 3;
+  }
+  
+  .menu-sm ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .menu-sm ul li {
+    margin: 5px 0;
+    display: block;
+    text-align: left;
+  }
+  
+  .menu-sm ul li a {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  /* Display Mobile Menu When Open */
+  .menu-sm.open {
+    display: flex;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    #navbar {
+      display: none;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
 }
 
 .header::after {
@@ -170,17 +285,18 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-    z-index: 1; /* Place the overlay behind the text */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
 }
 
 .header h1 {
-    font-size: 2.25em; /* Adjusted to em for responsiveness */
-    max-width: 50%; /* Limit width to 50% of the container */
-    width: 100%; /* Allow it to take full width within the max-width */
-    word-wrap: break-word; /* Allow long words to break onto the next line */
-    line-height: 1.2; /* Adjust line height for better spacing */
-    z-index: 99999;
+    font-size: 2.25em;
+    max-width: 80%;
+    color: #FFF;
+    line-height: 1.2;
+    word-wrap: break-word;
+    animation: fadeIn 1.5s ease-in-out; /* Applies fade-in animation */
+    z-index: 2;
 }
 
 .text-center {
@@ -188,7 +304,7 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 40px; /* Default padding */
+    padding: 40px; 
 }
 
 section .title {
@@ -197,16 +313,15 @@ section .title {
 
 @media (max-width: 768px) {
     section {
-        padding: 15px; /* Less padding on smaller screens */
+        padding: 15px; 
     }
 }
 
 @media (max-width: 480px) {
     section {
-        padding: 10px; /* Even less padding on extra small screens */
+        padding: 10px; 
     }
 }
-
 
 footer {
     text-align: center;
@@ -217,7 +332,6 @@ footer {
 
 #gi-products {
     /* padding: 20px; */
-    /* background-color: #f9f9f9; */
 }
 
 #gi-products h2, #gi-products h3 {
@@ -226,7 +340,6 @@ footer {
 }
 
 #gi-products .storyline {
-    /* margin-bottom: 40px; */
     text-align: center;
 }
 
@@ -243,16 +356,16 @@ footer {
 }
 
 .gi-products-container {
-    display: flex; /* Use flexbox for horizontal alignment */
-    overflow-x: auto; /* Allow horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling */
+    display: flex; 
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
     padding-bottom: 1em;
 }
 
 .gi-product {
-    flex: 0 0 auto; /* Prevent flex items from shrinking */
-    width: 200px; /* Set a fixed width for each product */
-    margin-right: 10px; /* Space between products */
+    flex: 0 0 auto; 
+    width: 200px; 
+    margin-right: 10px; 
     padding: 10px;
     text-align: center;
 }
@@ -262,17 +375,15 @@ footer {
 }
 
 .gi-product-image {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
 }
 
 .gi-product-name {
     margin-top: 10px;
 }
 
-/* Updated Storyline Styling */
 .storyline {
-    /* background-image: url('img/storyline-bg.jpg'); */
     background-size: cover;
     background-position: center;
     padding: 40px 20px;
@@ -295,7 +406,7 @@ footer {
     z-index: 2;
     max-width: 800px;
     margin: 0 auto;
-    animation: fadeIn 1.5s ease-in-out; /* Subtle fade-in animation */
+    animation: fadeIn 1.5s ease-in-out; 
 }
 
 .storyline h3 {
@@ -305,13 +416,13 @@ footer {
 }
 
 .storyline p {
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
 .storyline .highlight {
-    color: #ffd700; /* Gold highlight for key text */
+    color: #ffd700; 
     font-weight: bold;
     font-size: 1.3em;
 }
@@ -333,39 +444,48 @@ footer {
 }
 
 .map-container {
-    width: 100%; /* Set a maximum width for the map */
-    max-width: 800px; /* Maximum width for larger screens */
-    height: 450px; /* Height of the map */
-    margin: 0 auto; /* Center the map */
+    width: 100%; 
+    max-width: 800px; 
+    height: 450px; 
+    margin: 0 auto; 
     position: relative;
-    border: 1px solid #ccc; /* Optional: add a border */
-    border-radius: 8px; /* Optional: rounded corners */
-    overflow: hidden; /* Optional: keep edges clean */
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    overflow: hidden; 
     border: 5px solid #d1b375; 
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 15px; 
 }
 
 .map-section {
-    padding: 20px; /* Add padding for spacing */
-    text-align: center; /* Center the text */
+    padding: 20px; 
+    text-align: center; 
     animation: fadeIn 1.5s ease-in-out;
 }
 
 #map {
-    width: 100%; /* Map takes the full width of the container */
-    height: 100%; /* Map takes the full height of the container */
+    width: 100%; 
+    height: 100%; 
 }
 
 /* Adjust layout for smaller screens */
 @media (max-width: 768px) {
-    .gi-section {
-        flex-direction: column; /* Stack sections on smaller screens */
+    .gi-products-container {
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
     }
 
-    .map-section {
-        margin-top: 20px; /* Add space between stacked sections */
+    .gi-product {
+        min-width: 150px; 
+        margin-right: 5px; 
     }
 }
+
+@media (max-width: 480px) {
+    .gi-product {
+        min-width: 120px; 
+    }
+}
+
 
 /* GI Products Section */
 .gi-products-section {
@@ -379,13 +499,42 @@ footer {
 }
 
 .gi-product-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
-    gap: 10px; /* Reduced gap between items */
-    margin-bottom: 20px;
-    max-width: 80%;
-    margin: 0 auto;
+    display: grid; /* Use CSS Grid layout */
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal columns */
+    gap: 10px; /* Space between grid items */
+    margin-bottom: 20px; /* Space below the grid */
+    max-width: 80%; /* Limit maximum width of the grid */
+    margin: 0 auto; /* Center the grid horizontally */
 }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .gi-product-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .gi-product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gi-product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .gi-product-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+    .gi-product-item img {
+        width: 50%;
+    }
+}
+
 
 .gi-product-item {
     text-align: center;
@@ -406,7 +555,12 @@ footer {
 
 .gi-product-item:hover img {
     opacity: .8;
-    
+}
+
+@media (max-width: 576px) {
+    .gi-product-item img {
+        width: 50%;
+    }
 }
 
 .gi-product-item p {
@@ -432,40 +586,45 @@ footer {
 .project-info-section {
     position: relative;
     display: flex;
-    justify-content: center; /* Center the container */
-    align-items: center; /* Center content vertically */
-    /* background-color: #f8f8f8; */
+    justify-content: center;
+    align-items: center;
+    padding: 2em 0;
+    overflow: hidden;
 }
 
 .project-info-container {
-    width: 80%; /* Set the width of the container */
-    max-width: 1200px; /* Max width for larger screens */
+    width: 90%;
+    max-width: 1200px;
     position: relative;
 }
 
 .project-info-background {
     position: relative;
-    height: 100%;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .project-info-background img {
-    width: 100%; /* Image will take the full width of the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
     display: block;
-    border-radius: 15px; /* Rounded corners for the image */
+    border-radius: 15px;
 }
 
 .project-info-content {
     position: absolute;
     top: 50%;
+    right: -10%;
     transform: translate(-50%, -50%);
-    /* color: #333; */
     background: #FFF;
     border-radius: 6px;
     padding: 2em;
-    right: -28%;
     border: 3px solid #D1B377;
-    width: 50%;
+    width: 80%;
+    max-width: 500px;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
+    animation-delay: 0.5s;
 }
 
 .project-info-content h2 {
@@ -473,10 +632,38 @@ footer {
 }
 
 .project-info-content p {
-    font-size: 1.2em;
     line-height: 1.5;
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto; /* Center the paragraph */
+    margin: 0 auto;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-info-content {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5em;
+        margin-top: 1em;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
 }
 
 .learn-more-button {
@@ -521,8 +708,26 @@ footer {
 
 .recipe-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+@media (max-width: 1200px) {
+    .recipe-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets and small desktops */
+    }
+}
+
+@media (max-width: 768px) {
+    .recipe-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets and larger mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-container {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
 }
 
 .recipe-content {
@@ -552,14 +757,6 @@ footer {
     border-radius: .4em;
 }
 
-/* Event Layout */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
 #event-section {
     width: 100%;
     max-width: 1200px;
@@ -584,9 +781,7 @@ body {
 
 /* Event Card Styles */
 .event-card {
-    /* padding: 15px; */
-    border: 1px solid #ddd;
-    /* border-radius: 5px; */
+    border: 1px solid #ddd;/
     background-color: #fff;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
@@ -595,8 +790,6 @@ body {
 .event-poster {
     width: 100%;
     height: auto;
-    /* border-radius: 5px;
-    margin-bottom: 10px; */
 }
 
 .event-content {
