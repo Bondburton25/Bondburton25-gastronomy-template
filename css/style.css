@@ -1,0 +1,667 @@
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@100;200;300;400;500;600;700&display=swap'); */
+
+/* Font */
+@font-face {
+    font-family: 'FC Iconic';
+    src: url('../fonts/FCIconicNoncommercial-Bold.woff2') format('woff2'),
+        url('FCIconicNoncommercial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FC Iconic';
+    src: url('../fonts/FCIconicNoncommercial-BoldCompressed.woff2') format('woff2'),
+        url('FCIconicNoncommercial-BoldCompressed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FC Iconic';
+    src: url('../fonts/FCIconicNoncommercial-BoldCondensed.woff2') format('woff2'),
+        url('FCIconicNoncommercial-BoldCondensed.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FC Iconic';
+    src: url('../fonts/FCIconicNoncommercial-BoldExpanded.woff2') format('woff2'),
+        url('FCIconicNoncommercial-BoldExpanded.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FC Iconic';
+    src: url('../fonts/FCIconicNoncommercial-Light.woff2') format('woff2'),
+        url('FCIconicNoncommercial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FC Iconic';
+    src: url('../fonts/FCIconicNoncommercial-BoldWide.woff2') format('woff2'),
+        url('FCIconicNoncommercial-BoldWide.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: "IBM Plex Sans Thai", sans-serif; */
+    font-family: 'FC Iconic';
+    font-weight: normal;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.header {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    color: white; /* Text color */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add padding */
+    opacity: 0; /* Start with opacity 0 for fade-in */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.header-content {
+    position: relative; /* Position relative to overlay */
+    z-index: 2; /* Bring content above overlay */
+    display: flex; /* Flex container for icon and text */
+    align-items: center; /* Center vertically */
+    animation: slideIn 0.5s forwards; /* Slide-in animation */
+    opacity: 0; /* Start with opacity 0 for fade-in */
+    transform: translateX(-50px); /* Start from the left */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-color {
+    color: #FFF;
+}
+
+.food-icon {
+    font-size: 50px; /* Adjust the icon size */
+    margin-right: 10px; /* Space between icon and text */
+    transition: transform 0.3s; /* Smooth transition for scale effect */
+}
+
+.food-icon:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+nav {
+    position: absolute; /* Absolute positioning to keep it at the top */
+    top: 20px; /* Space from the top */
+    left: 0;
+    right: 0;
+    z-index: 2; /* Bring nav above overlay */
+    text-align: center; /* Center nav items */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display items inline */
+    margin: 0 15px; /* Space between items */
+}
+
+nav ul li a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover for effect */
+    color: #ffcc00; /* Change color on hover (customize as needed) */
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+}
+
+.header h1 {
+    font-size: 2.25em; /* Adjusted to em for responsiveness */
+    max-width: 50%; /* Limit width to 50% of the container */
+    width: 100%; /* Allow it to take full width within the max-width */
+    word-wrap: break-word; /* Allow long words to break onto the next line */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    z-index: 99999;
+}
+
+.text-center {
+    text-align: center;
+}
+
+section {
+    padding: 40px; /* Default padding */
+}
+
+section .title {
+    margin-bottom: 1em;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 10px; /* Even less padding on extra small screens */
+    }
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+#gi-products {
+    /* padding: 20px; */
+    /* background-color: #f9f9f9; */
+}
+
+#gi-products h2, #gi-products h3 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#gi-products .storyline {
+    /* margin-bottom: 40px; */
+    text-align: center;
+}
+
+#gi-products .storyline h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#gi-products .storyline p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gi-products-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding-bottom: 1em;
+}
+
+.gi-product {
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    width: 200px; /* Set a fixed width for each product */
+    margin-right: 10px; /* Space between products */
+    padding: 10px;
+    text-align: center;
+}
+
+.gi-products-slider {
+    position: relative;
+}
+
+.gi-product-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.gi-product-name {
+    margin-top: 10px;
+}
+
+/* Updated Storyline Styling */
+.storyline {
+    /* background-image: url('img/storyline-bg.jpg'); */
+    background-size: cover;
+    background-position: center;
+    padding: 40px 20px;
+    position: relative;
+    text-align: center;
+}
+
+.storyline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.storyline-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out; /* Subtle fade-in animation */
+}
+
+.storyline h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.storyline p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.storyline .highlight {
+    color: #ffd700; /* Gold highlight for key text */
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.map-title {
+    margin-bottom: 1em;
+}
+
+.map-container {
+    width: 100%; /* Set a maximum width for the map */
+    max-width: 800px; /* Maximum width for larger screens */
+    height: 450px; /* Height of the map */
+    margin: 0 auto; /* Center the map */
+    position: relative;
+    border: 1px solid #ccc; /* Optional: add a border */
+    border-radius: 8px; /* Optional: rounded corners */
+    overflow: hidden; /* Optional: keep edges clean */
+    border: 5px solid #d1b375; 
+    border-radius: 15px; /* Rounded corners */
+}
+
+.map-section {
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center the text */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#map {
+    width: 100%; /* Map takes the full width of the container */
+    height: 100%; /* Map takes the full height of the container */
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .gi-section {
+        flex-direction: column; /* Stack sections on smaller screens */
+    }
+
+    .map-section {
+        margin-top: 20px; /* Add space between stacked sections */
+    }
+}
+
+/* GI Products Section */
+.gi-products-section {
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gi-products-section .title {
+    margin-bottom: 1em;
+}
+
+.gi-product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 10px; /* Reduced gap between items */
+    margin-bottom: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.gi-product-item {
+    text-align: center;
+    padding: 5px; /* Reduced padding */
+    
+}
+
+.gi-product-item img {
+    width: 100%; /* Smaller image size */
+    height: auto;
+    display: block;
+    margin: 0 auto 5px; /* Reduced bottom margin */
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    border-radius: 6px;
+}
+
+.gi-product-item:hover img {
+    opacity: .8;
+    
+}
+
+.gi-product-item p {
+    font-size: 0.8em; /* Smaller text for product name */
+    margin-top: 5px;
+}
+
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.load-more-btn:hover {
+    background-color: #45a049;
+}
+
+/* Project Info Section */
+.project-info-section {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center; /* Center content vertically */
+    /* background-color: #f8f8f8; */
+}
+
+.project-info-container {
+    width: 80%; /* Set the width of the container */
+    max-width: 1200px; /* Max width for larger screens */
+    position: relative;
+}
+
+.project-info-background {
+    position: relative;
+    height: 100%;
+}
+
+.project-info-background img {
+    width: 100%; /* Image will take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 15px; /* Rounded corners for the image */
+}
+
+.project-info-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* color: #333; */
+    background: #FFF;
+    border-radius: 6px;
+    padding: 2em;
+    right: -28%;
+    border: 3px solid #D1B377;
+    width: 50%;
+}
+
+.project-info-content h2 {
+    margin-bottom: 15px;
+}
+
+.project-info-content p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+.learn-more-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding: 20px; */
+}
+
+.recipe-section {
+    background-color: #C6BCA3;
+    padding: 40px 0;
+    opacity: 0; /* Start as invisible */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.7s ease, transform 0.7s ease; /* Smooth transition */
+}
+
+.recipe-section.animate {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Original position */
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #4b372b;
+    margin-bottom: 20px;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 20px;
+}
+
+.recipe-content {
+    margin-bottom: 2em;
+}
+
+.recipe-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.recipe-item img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #FFF;
+}
+
+.recipe-text {
+    margin-top: 8px;
+    font-size: 14px;
+    background-color: #FFF;
+    color: #A37C2A;
+    padding: 8px 10px;
+    border-radius: .4em;
+}
+
+/* Event Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#event-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#event-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row on desktop */
+    gap: 20px;
+}
+
+/* Event Card Styles */
+.event-card {
+    /* padding: 15px; */
+    border: 1px solid #ddd;
+    /* border-radius: 5px; */
+    background-color: #fff;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.event-poster {
+    width: 100%;
+    height: auto;
+    /* border-radius: 5px;
+    margin-bottom: 10px; */
+}
+
+.event-content {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.event-card h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.event-card p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.date, .location {
+    font-weight: bold;
+}
+
+.description {
+    font-style: italic;
+}
+
+/* Responsive adjustments for tablet and mobile */
+@media (max-width: 992px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .event-grid {
+        grid-template-columns: 1fr; /* 1 item per row on mobile */
+    }
+}
+
+/* Container for the Facebook Page plugins */
+.fb-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center the items */
+    margin: -10px; /* Adjust for spacing between items */
+}
+
+/* Individual Facebook Page plugin styles */
+.fb-page {
+    display: inline-block; /* Keep elements inline */
+    margin: 10px; /* Add margin for spacing */
+    width: 300px; /* Set a specific width for consistency */
+    flex: 1 1 300px; /* Allow items to grow and shrink */
+    max-width: calc(100% / 4 - 20px); /* Max width to fit four items in a row */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .fb-page {
+        max-width: calc(100% / 2 - 20px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .fb-page {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
